@@ -56,7 +56,7 @@ class BetModel(TimestampModel):
         LAY = 'lay', 'Lay'
 
     name = models.CharField(primary_key=True, max_length=100)
-    feature_generator = models.CharField(max_length=100)
+    feature_generator = models.CharField(max_length=100, null=True)
     type = models.CharField(max_length=50, choices=BetType.choices)
     active = models.BooleanField(default=True)
 
